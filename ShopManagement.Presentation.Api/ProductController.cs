@@ -15,7 +15,7 @@ public class ProductController : ControllerBase
         _productQuery = productQuery;
     }
 
-    [HttpGet]
+    [HttpGet("[action]")]
     public List<ProductQueryModel> GetLatestArrivals()
     {
         return _productQuery.GetLatestArrivals();
